@@ -3,6 +3,6 @@ steps:
     args: ["install", "github.com/arcade55/cbuild"]
     env: ["PROJECT_ROOT=github.com/arcade55/cbuild"]
   - name: "gcr.io/cloud-builders/docker"
-    args: ["build", "-t", "gcr.io/fifth-compass-175105/cbuild:$REVISION_ID", "-f", "Dockerfile", "."]
+    args: ["build", "-t", "gcr.io/project1-175402/cbuild:$REVISION_ID", "-f", "Dockerfile", "."]
 images:
-  - "gcr.io/fifth-compass-175105/cbuild:$REVISION_ID"
+  - "gcr.io/project1-175402/cbuild:$REVISION_ID"
