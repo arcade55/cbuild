@@ -1,7 +1,7 @@
 steps:
   - name: "gcr.io/cloud-builders/go"
-    args: ["install", "github.com/arcade55/cbuild"]
-    env: ["PROJECT_ROOT=github.com/arcade55/cbuild"]
+    args: ["install", "cbuild"]
+    env: ["PROJECT_ROOT=cbuild"]
   - name: "gcr.io/cloud-builders/docker"
     args: ["build", "-t", "gcr.io/k7endpoint/cbuild:$REVISION_ID", "-f", "Dockerfile", "."]
 images:
