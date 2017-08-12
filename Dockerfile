@@ -1,5 +1,5 @@
 FROM alpine
 
-COPY gopath/bin/cbuild /go/bin/cbuild
+COPY gopath/bin/build /go/bin/build
 
-ENTRYPOINT /go/bin/cbuild
+ENTRYPOINT /go/bin/build
