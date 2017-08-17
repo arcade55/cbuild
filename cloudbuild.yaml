@@ -2,7 +2,7 @@ steps:
   - name: 'gcr.io/cloud-builders/go'
     args: ['get', 'cloud.google.com/go/trace']
     env: ['GOPATH=/workspace/gopath']
- - name: 'gcr.io/cloud-builders/go'
+  - name: 'gcr.io/cloud-builders/go'
     args: ['get', 'golang.org/x/net/context']
     env: ['GOPATH=/workspace/gopath']
   - name: "gcr.io/cloud-builders/go"
