@@ -6,6 +6,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"time"
 )
 
 func main() {
@@ -25,6 +26,7 @@ func main() {
 	handler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		span := traceClient.NewSpan("newTraceSpanForBuild")
 		defer span.Finish()
+		time.Sleep(3000 * time.Millisecond)
 		io.WriteString(w, "With tracing capability???")
 	})
 
