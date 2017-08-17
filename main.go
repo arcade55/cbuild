@@ -1,11 +1,11 @@
 package main
 
 import (
-	"log"
-	"io"
-	"net/http"
 	"cloud.google.com/go/trace"
 	"golang.org/x/net/context"
+	"io"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -19,7 +19,12 @@ func main() {
 		log.Fatalf("Failed to create client: %v", err)
 	}
 
+	p, err := trace.NewLimitedSampler(0.999, 5)
+	traceClient.SetSamplingPolicy(p)
+
 	handler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		span := traceClient.NewSpan("newTraceSpanForBuild")
+		defer span.Finish()
 		io.WriteString(w, "With tracing capability???")
 	})
 
