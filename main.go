@@ -26,7 +26,7 @@ func main() {
 	handler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		span := traceClient.NewSpan("newTraceSpanForBuild")
 		defer span.Finish()
-		time.Sleep(1200 * time.Millisecond)
+		time.Sleep(1100 * time.Millisecond)
 		io.WriteString(w, "full CD???")
 	})
 
