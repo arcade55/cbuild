@@ -12,5 +12,6 @@ steps:
     args: ["build", "-t", "gcr.io/k7endpoint/cbuild:$REVISION_ID", "-f", "Dockerfile", "."]
   - name: "gcr.io/cloud-builders/kubectl"
     args: ["set", "image", "deployments", "cbuild-node=gcr.io/k7endpoint/cbuild:$REVISION_ID", "--all"]
+    env:  ['CLOUDSDK_COMPUTE_ZONE=australia-southeast1-a', 'CLOUDSDK_CONTAINER_CLUSTER=example-cluster-name']  
 images:
   - "gcr.io/k7endpoint/cbuild:$REVISION_ID"
