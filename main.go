@@ -26,7 +26,7 @@ func main() {
 		span := traceClient.NewSpan("newTraceSpanForBuild")
 		defer span.Finish()
 //		time.Sleep(1120 * time.Millisecond)
-		io.WriteString(w, "Now with dep" + "\n")
+		io.WriteString(w, "Fully automated with dep" + "\n")
 	})
 
 	http.Handle("/foo", traceClient.HTTPHandler(handler))
