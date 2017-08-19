@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b285fd34-a4c4-475e-87db-a98e7f47208b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cloudbuild.yaml" afterPath="$PROJECT_DIR$/cloudbuild.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.go" afterPath="$PROJECT_DIR$/main.go" />
-    </list>
+    <list default="true" id="b285fd34-a4c4-475e-87db-a98e7f47208b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,8 +53,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1008" />
-    <option name="y" value="639" />
+    <option name="x" value="570" />
+    <option name="y" value="750" />
     <option name="width" value="1913" />
     <option name="height" value="975" />
   </component>
@@ -111,7 +108,7 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1008" y="639" width="1913" height="975" extended-state="0" />
+    <frame x="570" y="750" width="1913" height="975" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
