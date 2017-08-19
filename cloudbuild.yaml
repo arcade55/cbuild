@@ -1,17 +1,8 @@
 steps:
-  - name: 'gcr.io/cloud-builders/go'
-    args: ['get', 'cloud.google.com/go/trace']
-    env: ['GOPATH=/workspace/gopath']
-  - name: 'gcr.io/cloud-builders/go'
-    args: ['get', 'golang.org/x/net/context']
-    env: ['GOPATH=/workspace/gopath']
   - name: "gcr.io/cloud-builders/go"
     args: ["install", "gcr.io/k7endpoint/cbuild"]
     env: ["PROJECT_ROOT=gcr.io/k7endpoint/cbuild"]
   - name: "gcr.io/cloud-builders/docker"
     args: ["build", "-t", "gcr.io/k7endpoint/cbuild:$REVISION_ID", "-f", "Dockerfile", "."]
-  - name: "gcr.io/cloud-builders/kubectl"
-    args: ["set", "image", "deployments", "cbuild-node=gcr.io/k7endpoint/cbuild:$REVISION_ID", "--all"]
-    env:  ['CLOUDSDK_COMPUTE_ZONE=australia-southeast1-a', 'CLOUDSDK_CONTAINER_CLUSTER=example-cluster-name']  
 images:
   - "gcr.io/k7endpoint/cbuild:$REVISION_ID"
