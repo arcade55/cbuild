@@ -3,6 +3,6 @@ steps:
     args: ["install", "github.com/arcade55/cbuild"]
     env: ["PROJECT_ROOT=github.com/arcade55/cbuild"]
   - name: "gcr.io/cloud-builders/docker"
-    args: ["build", "-t", "gcr.io/k7endpoint/cbuild:$REVISION_ID", "-f", "Dockerfile", "."]
+    args: ["build", "-t", "gcr.io/pembridge-ingress/cbuild:$REVISION_ID", "-f", "Dockerfile", "."]
 images:
-  - "gcr.io/k7endpoint/cbuild:$REVISION_ID"
+  - "gcr.io/pembridge-ingress/cbuild:$REVISION_ID"
